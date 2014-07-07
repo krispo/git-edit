@@ -1,0 +1,47 @@
+.gitedit x { position: absolute;  background-color: #fff; border-style: dashed; border-width: 1px; border-color: #ccc; border-radius: 5px 5px 5px 5px; padding: 10px 10px 10px 10px;}
+
+/* e-header */
+.gitedit x .e-header { width: 100%; height: 21px; }
+.gitedit x .e-header .labels { float: right; position: relative; background: #ccc; font-family: sans-serif; font-size: 12px; padding: 1px 5px 1px 1px; border-radius: 5px 0 0 0; margin-right: -2px;}
+.gitedit x .e-header .labels span { padding: 6px 5px 1px 0px; margin-left:5px; border-right-style: ridge; border-right-width: 1px;}
+.gitedit x .e-header .labels label { cursor: pointer; }
+.gitedit x .e-header button { float: right; height:100%;margin: 0px -2px -1px 2px; padding: 1px 4px 1px 4px; background: #ccc; border-width: 1px;}
+
+/* e-body */
+.gitedit x .e-body { width: 100%; height: 300px; border-style: solid; border-width: 1px; border-color: #ccc;}
+.gitedit x .e-body .e { position:relative; width:100%; height:100%; border-style: none; }
+
+.gitedit x .e-body div pre, iframe {margin: 0px 0px 0px 0px;}
+
+.gitedit x[role="splitH"] .e-body div[role="input"] { width: 100%; height:50%; }
+.gitedit x[role="splitH"] .e-body div[role="output"] { width: 100%; height:50%; }
+
+.gitedit x[role="splitV"] .e-body { display: inline-block; margin: 0px 0px 0px 0px;}
+.gitedit x[role="splitV"] .e-body div[role="input"] { display: inline-block; width: 50%; height:100%; }
+.gitedit x[role="splitV"] .e-body div[role="output"] { display: inline-block; width: 50%; height:100%; }
+
+.gitedit x[role="code"] .e-body div[role="input"] { width: 100%; height: 100%; }
+.gitedit x[role="code"] .e-body div[role="output"] { display: none; }
+
+.gitedit x[role="preview"] .e-body div[role="input"] { display: none; }
+.gitedit x[role="preview"] .e-body div[role="output"] { width: 100%; height: 100%; }
+
+/* e-footer */
+.gitedit x .e-footer { width: 100%; margin-top: 5px;}
+.gitedit x[role="splitV"] .e-footer { margin-top: 1px;}
+.gitedit x .e-footer img { width:48px; float:left; margin: 0px 0px 0px 0px; }
+.gitedit x .e-footer .commit-form { padding: 10px 23px 0px 0px; border-style: solid; border-width: 1px; border-color: #ddd; width:auto; margin: 0px -2px 0px 55px; }
+.gitedit x .e-footer .commit-form .heading, .message, .actions { width:100%; margin: 0px 0px 10px 10px; }
+.gitedit x .e-footer .commit-form .description { width: calc(100% - 4px); border-style: inset; border-width: 2px; margin: 0px 10px 5px 10px; }
+.gitedit x .e-footer .commit-form .actions { text-align: right; }
+.gitedit x .e-footer .commit-form .actions .cancel-btn { color: darkred; margin: 0px 5px 0px 5px; }
+.gitedit x .e-footer .commit-form .actions .commit-btn { color: green; margin: 0px -4px 0px 5px; }
+
+/* full screen */
+.gitedit x.fullScreen { height: 100%; width: 100%; border: 0px; margin: 0px; position: fixed !important; top: 0px !important; bottom: 0px; left: 0px !important; right: 0px; z-index: 1000; overflow: auto; border-style: none; border-radius: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;}
+.gitedit x.fullScreen .e-header { position: absolute; z-index: 1001; width: auto;right: 2px}
+.gitedit x.fullScreen .e-header .labels { border-radius: 0 0 0 5px; }
+
+.gitedit x.fullScreen .e-body { height: 100%; border-style: none; border-bottom-style: solid;}
+
+.gitedit x.fullScreen .e-footer { width: calc(100% - 20%); margin: 5px 0px 10px 10%; }
