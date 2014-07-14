@@ -4,6 +4,7 @@ var ge = {
     element: null,      // git-edit element, <x></x>
     editor: null,       // ace editor element
     parentNode: null,   // the element for which git-edit is created
+    connection: null,   // github connection info
     github: null,       // github api
     baserepo: null,     // base repository from we read content
     headrepo: null,     // head repository for not owner users that want to pull request to base repo.
@@ -19,10 +20,10 @@ document.write('<script src="https://rawgit.com/michael/github/master/github.js"
 document.write('<script src="https://rawgit.com/ajaxorg/ace-builds/master/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>');
 document.write('<script src="https://rawgit.com/ajaxorg/ace-builds/master/src-min-noconflict/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>');
 
-// IsConnectedWithGithubEvent event is emitted by 'git-connect.js' plugin
-document.addEventListener('IsConnectedWithGithubEvent', function(e){
+// IsConnectedToGithubEvent event is emitted by 'git-connect.js' plugin
+document.addEventListener('IsConnectedToGithubEvent', function(e){
     // get connection info after user is connected to github
-    ge['connection'] = e.detail;
+    ge.connection = e.detail;
 
     //initialize github api
     ge.github = new Github({
@@ -32,6 +33,14 @@ document.addEventListener('IsConnectedWithGithubEvent', function(e){
 
     //get base github repo using connection config
     ge.baserepo = ge.github.getRepo(ge.connection.config['owner'], ge.connection.config['reponame']);
+});
+
+// IsDisconnectedFromGithubEvent event is emitted by 'git-connect.js' plugin
+document.addEventListener('IsDisconnectedFromGithubEvent', function(e){
+    // clear all github info after user is disconnected from github
+    ge.connection = null;
+    ge.github = null;
+    ge.baserepo = null;
 });
 
 // Initialize editor on click for any element that marked with class 'gitedit'
