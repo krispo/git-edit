@@ -83,8 +83,8 @@ function initEditor(parent, event){
                 '<button onclick="toggleCssClass(ge.element, \'fullScreen\'); toggleCssClass(this.querySelector(\'i\'),\'fa-expand\'); toggleCssClass(this.querySelector(\'i\'),\'fa-compress\')"><i class="fa fa-expand"></i></button>' +
                 '<div class="labels">' +
                     '<span>' + ge.username + '</span>' +
-                    '<label><input type="radio" name="viewType" checked="checked" value="splitH"/>SplitH</label>' +
-                    '<label><input type="radio" name="viewType" value="splitV"/>SplitV</label>' +
+                    '<label><input type="radio" name="viewType" value="splitH"/>SplitH</label>' +
+                    '<label><input type="radio" name="viewType" checked="checked" value="splitV"/>SplitV</label>' +
                     '<label><input type="radio" name="viewType" value="code"/>Code</label>' +
                     '<label><input type="radio" name="viewType" value="preview"/>Preview</label>' +
                 '</div>' +
