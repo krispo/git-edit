@@ -10,6 +10,11 @@ It uses internally:
 * [Font Awesome](https://github.com/FortAwesome/Font-Awesome) - The iconic font and CSS toolkit.
 * [Hint](https://github.com/chinchang/hint.css) - A tooltip library in CSS.
 
+And it used along with
+
+* Installed [git-proxy](https://github.com/krispo/git-proxy) - it is needed for correct github authentication/authorization
+* [git-connect](https://github.com/krispo/git-connect) - it is a plugin that provides github OAuth only within the browser.
+
 ## How to use
 
 Add this scripts to the end of your html `body`:
@@ -18,7 +23,7 @@ Add this scripts to the end of your html `body`:
 <script src="https://rawgit.com/krispo/git-connect/master/git-connect.js"></script>
 <script src="https://rawgit.com/krispo/git-edit/master/git-edit.js"></script>
 ```
-And initialize [connection](https://github.com/krispo/git-connect) with this script:
+And then initialize [connection](https://github.com/krispo/git-connect) with adding this script after:
 ```html
 <script>
     window.connection({
@@ -41,7 +46,7 @@ and add info with `data-*` attribute for branch and main file, for example:
 Now if you deploy your app, you can call editor by `CTRL + Click` with click on your marked element.
 And then `edit` web page and `commit` the changes. You web page will updated immediately.
 
-Actually, you web page can be edited by any github user that connected to github through your app.
+Actually, your web page can be edited by any github user that connected to github through your app.
 And these changes will be like a `pull requests`.
 So, after `commit & pull` this repo will be forked automatically to this user github account.
 
