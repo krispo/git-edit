@@ -74,7 +74,7 @@ function initEditor(parent, event){
         // create editor element
         ge.element = document.createElement('x');
         ge.element.className += ' fullScreen';
-        ge.element.setAttribute('role','splitH');
+        ge.element.setAttribute('role','splitV');
         ge.element.style.top = Math.round(event.y + window.pageYOffset) + 'px';
         ge.element.style.left = Math.round(event.x + window.pageXOffset) + 'px';
         ge.parentNode.appendChild(ge.element);

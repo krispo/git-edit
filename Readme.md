@@ -1,7 +1,7 @@
 Git-Edit
 ==
 
-A small javascript plugin that allows to edit web pages directly from the browser at specific place with live preview and commit the changes to github.
+A small javascript plugin that allows to edit HTML web pages directly from the browser at specific place with live preview and commit the changes to github.
 
 It uses internally:
 
@@ -10,7 +10,7 @@ It uses internally:
 * [Font Awesome](https://github.com/FortAwesome/Font-Awesome) - The iconic font and CSS toolkit.
 * [Hint](https://github.com/chinchang/hint.css) - A tooltip library in CSS.
 
-And it used along with
+And it is used along with
 
 * Installed [git-proxy](https://github.com/krispo/git-proxy) - it is needed for correct github authentication/authorization
 * [git-connect](https://github.com/krispo/git-connect) - it is a plugin that provides github OAuth only within the browser.
@@ -44,6 +44,9 @@ and add info with `data-*` attribute for branch and main file, for example:
 ```
 
 Now if you deploy your app, you can call editor by `CTRL + Click` with click on your marked element.
+
+![editor](https://raw.github.com/krispo/git-edit/master/img/editor_full.png)
+
 And then `edit` web page and `commit` the changes. You web page will updated immediately.
 
 Actually, your web page can be edited by any github user that connected to github through your app.
