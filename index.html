@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<style>
+    body {padding: 10px;}
+    body:hover {outline:2px solid; padding: 10px;}
+    .container {text-align: center; margin:50px;}
+    .container button {width: 300px; height: 50px;}
+</style>
+
+<body class="gitedit" data-branch="gh-pages" data-file="index.html">
+
+<div style="width:100%;text-align:right;"><div style="margin: 10px 10px 10px 10px;"><img id="avatar" style="width: 47px;height:47px;"><div id="username">Guest</div></div></div>
+
+<h3 style="text-align: center;">
+    <div>To edit this web page, please</div>
+    <div style="color: darkred;" >CTRL + Click</div>
+    <div>on marked region</div>
+</h3>
+
+<div class="container">
+    <button id="git-connect-btn" onclick="connection.toggle()">TOGGLE</button>
+</div>
+<div class="container">
+    <a href="https://github.com/krispo/git-edit">Go to Github</a>
+</div>
+
+<link rel="stylesheet" href="https://rawgit.com/krispo/git-edit/master/git-edit.css">
+<script src="https://rawgit.com/krispo/git-connect/master/git-connect.js"></script>
+<script src="https://rawgit.com/krispo/git-edit/master/git-edit.js"></script>
+<script>
+    document.addEventListener('IsConnectedToGithubEvent', function(e){
+        $('#git-connect-btn').css('background-color', 'rgba(138, 206, 135, 0.64)').text('DISCONNECT from GITHUB');
+        e.detail.withCredentials(function(e,n,t,i){
+            $("#avatar").attr('src', i['avatar_url']);
+            $("#username").text(n);
+        })
+
+    });
+    document.addEventListener('IsDisconnectedFromGithubEvent', function(e){
+        $('#git-connect-btn').css('background-color','rgba(247, 104, 72, 0.37)').text('You should CONNECT to GITHUB');
+    });
+    var connection = window.connection({
+        client_id: "4f4230ad9be9b7c62178", //krispo/git-edit, prod
+        //client_id: "d24d65af8f05dd6f5cb7", // krispo/localhost, dev
+        proxy: "http://git-proxy.herokuapp.com",
+        owner: "krispo",
+        reponame: "git-edit"
+    });
+</script>
+</body>
+</html>
