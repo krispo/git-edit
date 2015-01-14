@@ -117,7 +117,7 @@ function initEditor(parent, event){
 
         ge.editor.getSession().setMode("ace/mode/html");
         ge.editor.getSession().on('change', function(){
-            preview.frameElement.srcdoc=ge.editor.getSession().getValue();
+            preview.srcdoc=ge.editor.getSession().getValue();
         });
 
         // Set tooltips
