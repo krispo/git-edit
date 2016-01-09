@@ -15,9 +15,7 @@ var ge = {
 // include external scripts
 document.write('<link rel="stylesheet" href="https://rawgit.com/chinchang/hint.css/master/hint.min.css">')
 document.write('<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">')
-document.write('<script src="https://rawgit.com/michael/github/v0.9.0/lib/base64.js"></script>');
-document.write('<script src="https://rawgit.com/michael/github/v0.9.0/lib/underscore-min.js"></script>');
-document.write('<script src="https://rawgit.com/michael/github/v0.9.0/github.js"></script>');
+document.write('<script src="https://rawgit.com/michael/github/v0.10.7/github.js"></script>');
 document.write('<script src="https://rawgit.com/ajaxorg/ace-builds/master/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>');
 document.write('<script src="https://rawgit.com/ajaxorg/ace-builds/master/src-min-noconflict/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>');
 
